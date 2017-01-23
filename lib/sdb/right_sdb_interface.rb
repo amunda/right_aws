@@ -638,7 +638,7 @@ module RightAws
         result = select_response_to_ruby(request_info( link, QSdbSelectParser.new ))
       end while true
     rescue Exception => e
-      Rails.logger.info(e);
+      Rails.logger.error("right_sdb_interface#select - #{e}");
       on_exception
     end
 

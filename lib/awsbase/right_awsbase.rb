@@ -526,7 +526,7 @@ module RightAws
                 end
               rescue Exception => e
                 blockexception = e
-                Rails.logger.info("REQUEST_INFO_IMPL: Block Exception #{e}")
+                Rails.logger.error("right_awsbase#request_info_impl: Block Exception #{e}")
               end
             end
           rescue Exception => e
